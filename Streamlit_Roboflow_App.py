@@ -56,11 +56,11 @@ if image:
                 st.markdown(f"### 🔎 Detected Object #{i+1}")
                 st.markdown(
                     f"""
-                    - **Class:** `{pred['class'].replace('_', ' ').title()}`
-                    - **Confidence:** `{round(pred['confidence'] * 100, 2)}%`
+                    - **Class:** {pred['class'].replace('_', ' ').title()}
+                    - **Confidence:** {round(pred['confidence'] * 100, 2)}%
                     - **Coordinates:** X = {int(pred['x'])}, Y = {int(pred['y'])}
                     - **Box Size:** Width = {int(pred['width'])}, Height = {int(pred['height'])}
-                    - **Detection ID:** `{pred['detection_id']}`
+                    - **Detection ID:** {pred['detection_id']}
                     """
                 )
 
@@ -70,4 +70,13 @@ if image:
             - **Confidence**: Model certainty (closer to 100% is better).
             - **Box Size**: Size of the detected area.
             """)
+
+# Show model training insights
+with st.expander("📈 Model Training Insights"):
+    st.markdown("These charts represent the training progress of the YOLOv8 model used in this app:")
+    
+    st.image("images/box_loss.png", caption="Box Loss - Measures the accuracy of bounding box predictions.")
+    st.image("images/class_loss.png", caption="Class Loss - Measures how well the model classified objects.")
+    st.image("images/object_loss.png", caption="Object Loss - Tracks how confidently the model detects the object.")
+    st.image("images/performance_map.png", caption="Model Performance (mAP) - Higher values indicate better detection accuracy across all classes.")
 
