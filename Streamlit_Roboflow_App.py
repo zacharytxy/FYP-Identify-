@@ -72,11 +72,11 @@ if image:
             """)
 
 # Show model training insights
-with st.expander("📈 Model Training Insights"):
-    st.markdown("These charts represent the training progress of the YOLOv8 model used in this app:")
+#with st.expander("📈 Model Training Insights"):
+    #st.markdown("These charts represent the training progress of the YOLOv8 model used in this app:")
     
-    st.image("images/box_loss.png", caption="Box Loss - Measures the accuracy of bounding box predictions.")
-    st.image("images/class_loss.png", caption="Class Loss - Measures how well the model classified objects.")
-    st.image("images/object_loss.png", caption="Object Loss - Tracks how confidently the model detects the object.")
-    st.image("images/performance_map.png", caption="Model Performance (mAP) - Higher values indicate better detection accuracy across all classes.")
+    #st.image("images/box_loss.png", caption="Box Loss - Measures the accuracy of bounding box predictions.")
+    #st.image("images/class_loss.png", caption="Class Loss - Measures how well the model classified objects.")
+    #st.image("images/object_loss.png", caption="Object Loss - Tracks how confidently the model detects the object.")
+    #st.image("images/performance_map.png", caption="Model Performance (mAP) - Higher values indicate better detection accuracy across all classes.")
 
