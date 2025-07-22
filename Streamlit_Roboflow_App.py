@@ -25,7 +25,8 @@ if uploaded_file:
 
     # Show the uploaded image
     image = Image.open(image_path)
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image_path, use_container_width=True)
+
 
     # Run inference
     with st.spinner("Detecting..."):
